@@ -13,6 +13,9 @@ var tools = require('geojson-tools');
 
 tools.validate(geojson);
 
+// Makes geojson valid according to PostGIS, no self intersections, etc.
+tools.fix(geojson)
+
 tools.merge(geojson1, geojson2);
 
 tools.simplify(geojson, tolerance);
